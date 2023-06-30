@@ -1,6 +1,6 @@
 import sqlite3
 
-conn = sqlite3.connect('emaildb.ssqlite')
+conn = sqlite3.connect('emaildb.sqlite')
 cur = conn.cursor()
 
 cur.execute('DROP TABLE IF EXISTS counts''')
@@ -15,7 +15,7 @@ for line in fh:
     if not line.startswith('From: '): continue
     pieces = line.split()
     email = pieces[1]
-    cur.execute('SELECT count FROM Counts WHERE email = ? ', (email,))
+    cur.execute('SELECT count FROM Counts WHERE email = ? ', (email,)) # question mark is a placeholder to prevent SQL injection
     row = cur.fetchone()
     if row is None:
         cur.execute('''INSERT INTO Counts (email, count)
