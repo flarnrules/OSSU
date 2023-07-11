@@ -5,6 +5,7 @@ location of commands:
 
 https://www.py4e.com/lectures3/Pythonlearn-15-Database-Handout.txt
 
+
 Tables:
 
 
