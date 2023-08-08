@@ -1,0 +1,16 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname pluralize) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
+;; string -> string
+;; take in a string and append s to the string
+; (define (pluralize n) word)
+
+(check-expect (pluralize "word") "words")
+(check-expect (pluralize "dog") "dogs")
+
+;(define (pluralize n)
+;  (... n))
+
+(define (pluralize n)
+  (+ "s" "n"))
+
