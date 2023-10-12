@@ -125,7 +125,44 @@ def playGame(wordList):
     wordList: list (string)
     """
     # TO DO... <-- Remove this comment when you code this function
-    print("playGame not yet implemented.") # <-- Remove this when you code this function
+    hand = None  # Initialize hand to None. This will store the last hand dealt.
+
+    while True:  # Infinite loop to keep the game running until the user decides to exit
+        
+        # Step 1: Get game type from the user
+        while True:
+            
+            gameType = input("Enter n to deal a new hand, r to replay the last hand, or e to end the game: ")
+            print("")
+            if gameType in ['n', 'r', 'e']:
+                break
+            print("Invalid command.")
+        
+        # Exit the game
+        if gameType == 'e':
+            return
+        
+        # Check if the user wants to replay but hasn't played a hand yet
+        if gameType == 'r' and hand is None:
+            print("You have not played a hand yet. Please play a new hand first!")
+            continue
+        
+        # Step 2: Get player type from the user (computer or user)
+        while True:
+            playerType = input("Enter u to play yourself or c to have the computer play: ")
+            print("")
+            if playerType in ['u', 'c']:
+                break
+            print("Invalid command.")
+        
+        # Step 3: Handle game and player types
+        if gameType == 'n':
+            hand = dealHand(HAND_SIZE)  # Deal a new hand
+        
+        if playerType == 'u':
+            playHand(hand, wordList, HAND_SIZE)
+        else:
+            compPlayHand(hand, wordList, HAND_SIZE)
 
         
 #
