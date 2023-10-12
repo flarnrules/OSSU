@@ -289,22 +289,22 @@ def playGame(wordList):
  
     2) When done playing the hand, repeat from step 1    
     """
-    hand = None  # Initialize hand to None. This will store the last hand dealt.
+    hand = None
     gamesPlayed = 0
 
-    while True:  # Infinite loop to keep the game running until the user decides to exit
+    while True:
         gameType = input("Enter n to deal a new hand, r to replay the last hand, or e to end the game: ")
 
         if gamesPlayed < 1 and gameType == "r":
             print("You have not played a hand yet. Please play a new hand first!")
             print("")
-            continue  # Go to the start of the loop and prompt the user again
+            continue
 
         if gameType == "e":
-            return  # Exit the function (and the game)
+            return
 
         if gameType == "n":
-            hand = dealHand(HAND_SIZE)  # Deal a new hand
+            hand = dealHand(HAND_SIZE)
             playHand(hand, wordList, HAND_SIZE)
             gamesPlayed += 1
 
@@ -312,7 +312,7 @@ def playGame(wordList):
             playHand(hand, wordList, HAND_SIZE)
 
         else:
-            print("Invalid command.")  # Handle invalid input
+            print("Invalid command.")
     
    
 

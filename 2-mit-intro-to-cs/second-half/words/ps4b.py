@@ -124,10 +124,9 @@ def playGame(wordList):
 
     wordList: list (string)
     """
-    # TO DO... <-- Remove this comment when you code this function
-    hand = None  # Initialize hand to None. This will store the last hand dealt.
+    hand = None
 
-    while True:  # Infinite loop to keep the game running until the user decides to exit
+    while True:
         
         # Step 1: Get game type from the user
         while True:
@@ -157,7 +156,7 @@ def playGame(wordList):
         
         # Step 3: Handle game and player types
         if gameType == 'n':
-            hand = dealHand(HAND_SIZE)  # Deal a new hand
+            hand = dealHand(HAND_SIZE)
         
         if playerType == 'u':
             playHand(hand, wordList, HAND_SIZE)
