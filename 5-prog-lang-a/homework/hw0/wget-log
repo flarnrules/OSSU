@@ -1,0 +1,6 @@
+--2023-11-02 11:49:17--  https://d3c33hcgiwev3.cloudfront.net/_2fbdc6f053a05cb18a910cba669c2687_hw0provided.sml?Expires=1699056000
+Resolving d3c33hcgiwev3.cloudfront.net (d3c33hcgiwev3.cloudfront.net)... 54.192.121.202, 54.192.121.38, 54.192.121.167, ...
+Connecting to d3c33hcgiwev3.cloudfront.net (d3c33hcgiwev3.cloudfront.net)|54.192.121.202|:443... connected.
+HTTP request sent, awaiting response... 403 Forbidden
+2023-11-02 11:49:18 ERROR 403: Forbidden.
+
