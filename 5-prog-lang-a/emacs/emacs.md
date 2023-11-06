@@ -25,3 +25,21 @@ So the way we get the buffers to display is a simple command:
 So I think now is a good time to do the Emacs Tutorial again. Maybe this weekend?
 Alright that's it.
 
+### More Emacs Notes
+
+Okay so now that I've spent some time learning Emacs, let's try and recap some of the key aspects of the keybindings.
+
+**Windows**
+To delete all windows but the active window, run `C-x 1`
+To open a new buffer below, run `C-x 2`
+To open a new buffer to the right, run `C-x 3`
+
+**Main Stuff**
+To save... I can't remember
+To open the `*sml*` buffer, run `C-c C-s` -> I think this will only work if we have an `.sml` file open. From Emacs, to create a new file we can run:
+
+This is where the *find* feature comes in!
+
+Find is activated with `C-x C-f`
+It then prompts us for what file we are looking for.
+We can just **create** a file instead! Let's try.
