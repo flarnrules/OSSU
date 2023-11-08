@@ -1,3 +1,4 @@
+
 (* This is a comment. This is our first program. *)
 
 
@@ -17,6 +18,7 @@ val q = z + 1;
 (* static environment: x : int, y : int, z : int, q : int *)
 (* dynamic environment: x --> 34, y --> 17, z --> 70, q --> 71  *)
 
+
 val abs_of_z = if z < 0 then 0 - z else z;
 (* static environment: abs_of_z : int *)
 (* dynamic environment : ..., abs_of_z --> 70 *)
@@ -26,20 +28,5 @@ val abs_of_z_simpler = abs z; (* this is a function call to abs *)
 
 val less_than = 5  > 3;
 
-(* copy this note *)
-(* copy this note *)
-
-(* cut this note *)
-(* cut this note *)
-
-(* cut this note *)
-
-(* copy this note *)
-(* copy this note *)
-(* copy this note *)
-(* copy this note *)(* copy this note *)
-(* copy this note *)(* copy this note *)
 
 
-
-(* copy this note *)
