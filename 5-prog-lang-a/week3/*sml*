@@ -1,0 +1,23 @@
+Standard ML of New Jersey v110.79 [built: Sat Oct 26 12:27:04 2019]
+- use "21_records.sml";
+[opening 21_records.sml]
+val x = {bar=(3,true),baz=(false,9),foo=7}
+  : {bar:int * bool, baz:bool * int, foo:int}
+val my_niece = {id=41111,name="Amelia"} : {id:int, name:string}
+val brain_part = {ego=false,id=true,superego=false}
+  : {ego:bool, id:bool, superego:bool}
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey v110.79 [built: Sat Oct 26 12:27:04 2019]
+- use hw1.sml
+= ;
+xxxxstdIn:1.6-1.13 Error: unbound structure: hw1 in path hw1.sml
+- use "hw1.sml";
+[opening hw1.sml]
+[use failed: Io: openIn failed on "hw1.sml", No such file or directory]
+
+uncaught exception Error
+  raised at: ../compiler/TopLevel/interact/interact.sml:24.14-24.28
+- 

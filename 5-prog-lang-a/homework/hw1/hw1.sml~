@@ -1,0 +1,49 @@
+(* Programming Languages Part A - Homework 1 - Date Functions *)
+(* Assignment by Benjamin Reifenberg, November 2023 *)
+
+(* Function 1 - is_older *)
+fun is_older ((year1, month1, day1) : int*int*int, (year2, month2, day2) : int*int*int) =
+    if year1 < year2
+    then true
+    else if year1 = year2 andalso month1 < month2
+    then true
+    else if month1 = month2 andalso day1 < day2
+    then true
+    else false;
+
+(* Function 2 - number_in_month *)
+(* this will require recursion *)
+fun number_in_month (dates : (int*int*int) list, month : int) =
+    let
+	fun months(dates) =
+	    if null dates
+	    then []
+	    else #2 (hd dates) :: months (tl dates)
+	fun count (ms, count) =
+	    if null ms
+	    then count
+	    else
+		if hd ms = month
+		then count (tl ms, count + 1)
+		else count (tl ms, count)
+    in
+	count (months dates, 0)
+    end;
+
+    
+(*fun months (dates : (int*int*int) list) =
+    if null dates
+    then []
+    else #2 (hd dates):: months(tl dates);*)
+
+
+
+
+(* date values for testing *)
+val date1 = (2023,1,5)
+val date2 = (2022,1,5)
+val date3 = (2022,2,5)
+val date4 = (2022,2,6);
+
+
+

@@ -1,0 +1,10 @@
+(* bad max function to show crazy amounts of recursion *)
+
+fun bad_max (xs : int list) =
+    if null xs
+    then 0
+    else if null (tl xs)
+    then hd xs
+    else if hd xs > bad_max(tl xs)
+    then hd xs
+    else bad_max (tl xs);

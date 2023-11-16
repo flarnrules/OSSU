@@ -1,0 +1,1 @@
+(* notes from the video on booleans and comparisons *)

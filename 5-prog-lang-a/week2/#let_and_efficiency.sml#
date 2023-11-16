@@ -1,0 +1,3 @@
+(* this is notes from let & efficiency lesson *)
+(* let expressions to avoid repeated computation *)
+
