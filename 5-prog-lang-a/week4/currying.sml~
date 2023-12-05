@@ -1,0 +1,3 @@
+(* not currying *)
+fun sorted3_tupled (x,y,z) = z >= y andalso y >= x;
+val t1 = sorted3_tupled (7,9,11);
